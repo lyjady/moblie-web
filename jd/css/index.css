@@ -15,6 +15,11 @@ ul {
   list-style: none;
 }
 
+a {
+  color: #666666;
+  text-decoration: none;
+}
+
 .header {
   height: 45px;
 }
@@ -55,7 +60,10 @@ ul {
 }
 
 .search-wrap {
-  position: relative;
+  position: fixed;
+  width: 100%;
+  min-width: 320px;
+  max-width: 750px;
   height: 44px;
   overflow: hidden;
 }
@@ -70,17 +78,130 @@ ul {
 
 .search-btn {
   left: 0;
-  background-color: aqua;
 }
 
 .search {
+  position: relative;
   height: 30px;
   border-radius: 15px;
   margin: 7px 50px 0 50px;
-  background-color: #666666;
+  background-color: white;
 }
 
 .search-login {
   right: 0;
-  background-color: aquamarine;
+  line-height: 44px;
+  color: white;
+}
+
+.search-btn::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 18px;
+  background: url('../images/s-btn.png') no-repeat;
+  background-size: 20px 18px;
+  margin: 14px 0 0 15px;
+}
+
+.jd-icon {
+  position: absolute;
+  width: 20px;
+  height: 15px;
+  top: 8px;
+  left: 13px;
+  background: url('../images/jd.png') no-repeat;
+  background-size: 20px 15px;
+}
+
+.jd-icon::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 15px;
+  left: 25px;
+  background-color: #CCCCCC;
+}
+
+.glass {
+  position: absolute;
+  top: 8px;
+  left: 50px;
+  width: 18px;
+  height: 15px;
+  background: url('../images/jd-sprites.png') no-repeat -81px 0;
+  background-size: 200px;
+}
+
+.banner {
+  width: 100%;
+  min-width: 320px;
+  max-width: 750px;
+}
+
+.banner > img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.brand {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.brand > ul > li {
+  float: left;
+  width: 33.33%;
+}
+
+.brand > ul > li > a > img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+nav > a {
+  float: left;
+  display: block;
+  width: 20%;
+  padding-top: 10px;
+  text-align: center;
+}
+
+nav > a > img {
+  width: 40px;
+  height: 40px;
+}
+
+nav > a > span {
+  display: block;
+  font-size: 12px;
+}
+
+.news > a {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.news > a:first-child {
+  width: 50%;
+}
+
+.news > a:nth-child(n+2) {
+  width: 25%;
+}
+
+.news > a:nth-child(n+2)::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 100px;
+  top: 10px;
+  background-color: #CCCCCC;
+}
+
+.news > a > img {
+  width: 100%;
 }
