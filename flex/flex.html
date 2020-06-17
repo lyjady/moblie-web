@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex</title>
+  <style>
+      div {
+        width: 980px;
+        height: 400px;
+        background-color: aqua;
+        /* flex布局是即弹性布局, 是移动端常见的布局方式, 开启flex布局的元素称之为容器, 容器内的子元素称之为项目 */
+        display: flex;
+        /* flex-direction设置主轴方向, 默认是row(x轴, 从左到右), row-reverse(x轴, 从右到左), column(y轴, 从上到下), column-reverse(y轴, 从下到上) */
+        flex-direction: row;
+        /* 设置项目在主轴的排序方式默认是start. 如果主轴是row, 那么就是从x轴上从左边开始排列, 如果是column就是在y轴上从上开始排列 */
+        /* end: 从主轴尾开始排列, center: 主轴居中, 
+           space-around: 主轴上项目平均排列每个项目的margin-left与margin-right均相等, 
+           space-between: 首位两个项目位于主轴的两端, 其他的项目在主轴上平均排列(space-around)
+        */
+        justify-content: space-around;
+        /* flex-wrap: 如果项目一行放不下是否换行, 默认是nowrap不换行。这样会压缩项目的宽度以至于让一行能容的下, wrap是换行, 换行的话justify-content这个样式在新的一行依旧生效 */
+        flex-wrap: wrap;
+        /* align-items: 在侧轴的排列方式, center是居中, flex-start与flex-end类似于justify-content: start与justify-content: end */
+        align-items: center;
+        /* flex是子元素的样式, 里面写一个数字, 将父元素剩余的宽度(去除子元素的宽, margin-left, margin-right)根据flex中的数字的分数分给子元素 */
+        /* order: 子元素的样式, 用于设置子元素的顺序, 越小优先级越高 */
+        /* algin-self: 子元素样式, 用于设置指定子元素的排列 */
+      }
+
+      div span {
+        width: 150px;
+        height: 100px;
+        background-color: cornflowerblue;
+        margin: 10px;
+      }
+  </style>
+</head>
+<body>
+  <div>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+  </div>
+</body>
+</html>

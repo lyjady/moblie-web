@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+div {
+  box-sizing: border-box;
+}
+
 .search-index {
   position: fixed;
   display: flex;
@@ -22,12 +26,33 @@ a {
   min-width: 320px;
   max-width: 750px;
   height: 44px;
-  background-color: aquamarine;
+  background-color: #FFFFFF;
 }
 
 .search {
+  position: relative;
   flex: 1;
-  background-color: aqua;
+  margin: 8px 10px;
+  padding-left: 35px;
+  height: 26px;
+  line-height: 24px;
+  border: 1px solid transparent;
+  border-radius: 13px;
+  background-color: #ECECED;
+  box-shadow: 0px 6px 4px rgba(0,0,0,.2);
+  font-size: 12px;
+  color: #666666;
+}
+
+.search::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  background: url('../images/sprite.png') no-repeat -59px -279px;
+  background-size: 104px auto;
 }
 
 .user {
@@ -45,4 +70,14 @@ a {
   height: 22px;
   background: url("../images/sprite.png") no-repeat -59px -194px;
   background-size: 104px auto;
+}
+
+.focus {
+  position: relative;
+  top: 44px;
+  height: 75px;
+}
+
+.focus img {
+  width: 100%;
 }
