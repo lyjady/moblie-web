@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rem</title>
+  <style>
+    html {
+      font-size: 10px;
+    }
+
+    /* 1rem表示html标签内的字体大小的1一倍, 如果width: 10rem那就表示宽度为html元素字体大小的10倍 */
+    p {
+      width: 10rem;
+      height: 10rem;
+      background-color: #4b90ed;
+    }
+
+    /* @media媒体样式, screen表示监听的类型, screen指屏幕的宽度, 还有打印机和all, and表示连接符, (max-width: 319px)表示监听的属性, 当屏幕的宽度小于等于319px时执行大括号内的样式 */
+    /* @media属性要从小到大来写 */
+    /* width <= 319 */
+    @media screen and (max-width: 319px) {
+      body {
+        background-color: #4b90ed;
+      }
+    }
+
+    /* 320px <= width <= 539 */
+    @media screen and (max-width: 539px) and (min-width: 320px){
+      body {
+        background-color: #6bd558;
+      }
+    }
+
+    /* 540px <= width <= 749 */
+    @media screen and (max-width: 749px) and (min-width: 540px) {
+      body {
+        background-color: #53bced;
+      }
+    }
+
+    /* width >= 750px */
+    @media screen and (min-width: 750px) {
+      body {
+        background-color: #666666;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p></p>
+</body>
+</html>

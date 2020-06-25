@@ -1,0 +1,28 @@
+// less是css的扩展类型, 以往的css无法定义变量与进行简单的二元运算, 但是在less中可以
+// 在less中定义变量是在变量名前加一个@符号
+@number: 15;
+@media screen and (max-width: 319px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 320px) {
+  html {
+    // 如果参数二元运算的两个数字都带有单位那么单位采用第一个的单位, 如果只有一个带有单位那就采用有单位的那个
+    font-size: 320px / @number;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  html {
+    font-size: 540px / @number;
+  }
+}
+
+@media screen and (min-width: 750px){
+  html {
+    font-size: 750px / @number;
+  }
+}
+
+// 对于rem的基准html的font-size的大小确定使用指定的宽度区间的边界除指定的份数
