@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reative</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style>
+    .row div {
+      background-color: #53BCED;
+      /*border: 1px solid #727272;*/
+    }
+  </style>
+</head>
+<body>
+  <!-- 响应式布局中需要为子元素包含一个container一个父容器, 通过媒体查询改变父容器的宽度以改变子元素的样式, 每个屏幕尺寸都对应一个父容器宽度 -->
+  <div class="container">
+    <div class="row">
+      <!-- 栅格布局 -->
+      <!-- col-lg-x表示最宽的宽度, x表示分数, bootstrap将一个row分成12份 -->
+      <!-- col-md-x表示中等, col-sm-x表示小屏, col-xs-x表示手机屏幕 -->
+      <!-- 必须在.container .row 下 -->
+      <!-- 如果一个row的分数超过12那么会换行显示, 如果不足12那么不足的地方会空出来 -->
+      <!-- 可以在一个类中写多个col-xx-x, div=class"col-lg-3 col-md-4" 那就表示该元素在大屏下占4份, 中等屏幕占3份 -->
+      <!-- 栅格布局可以进行嵌套, 在col-xx-x中在进行col-xx-x的嵌套, 但是默认bootstrap会一个padding, 如果直接嵌套两个padding都会生效, 要是只想让一个padding生效还需要在嵌套里面加一个.row元素包裹col-xx-x -->
+      <div class="col-lg-3 col-md-12 col-sm-6 col-xs-12">1</div>
+      <div class="col-lg-3 col-md-12 col-sm-6 col-xs-12">2</div>
+      <div class="col-lg-3 col-md-12 col-sm-6 col-xs-12">3</div>
+      <div class="col-lg-3 col-md-12 col-sm-6 col-xs-12">
+        <div class="row">
+          <div class="col-lg-3">A</div>
+          <div class="col-lg-9">B</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
