@@ -4,6 +4,62 @@
   }
 }
 
+@media screen and (max-width: 991px) {
+  .logo {
+    text-align: center;
+  }
+
+  header > nav > ul > li {
+    float: left;
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .logo span {
+    color: white;
+    font-size: 18px;
+  }
+
+  header > nav > ul > li {
+    font-size: 12px;
+    padding: 0;
+  }
+
+  .news > ul > li {
+    width: 50% !important;
+  }
+
+  .news > ul > li:first-child {
+    width: 100% !important;
+  }
+
+  .public h3 {
+    font-size: 14px;
+  }
+
+    /*[class^=col-] {*/
+    /*  padding: 0;*/
+    /*}*/
+
+  .container {
+    padding: 0;
+  }
+
+  header {
+    padding-right: 0 !important;
+  }
+
+  nav {
+    padding: 0 5px !important;
+  }
+}
+
 a {
   text-decoration: none;
   color: #666666;
